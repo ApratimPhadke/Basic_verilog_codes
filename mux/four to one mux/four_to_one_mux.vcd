@@ -1,0 +1,55 @@
+$date
+	Thu Jan 09 09:46:33 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module four_to_one_mux_tb $end
+$var wire 1 ! q $end
+$var reg 1 " A $end
+$var reg 1 # B $end
+$var reg 1 $ C $end
+$var reg 1 % D $end
+$var reg 1 & a $end
+$var reg 1 ' b $end
+$scope module uut $end
+$var wire 1 " A $end
+$var wire 1 # B $end
+$var wire 1 $ C $end
+$var wire 1 % D $end
+$var wire 1 & a $end
+$var wire 1 ' b $end
+$var wire 1 ! q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0'
+0&
+0%
+0$
+0#
+1"
+1!
+$end
+#10000
+1#
+0"
+1'
+#20000
+1$
+0#
+0'
+1&
+#30000
+1%
+0$
+1'
+#40000

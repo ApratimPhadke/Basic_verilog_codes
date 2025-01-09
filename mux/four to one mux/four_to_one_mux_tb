@@ -1,0 +1,128 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001d9a929cff0 .scope module, "four_to_one_mux_tb" "four_to_one_mux_tb" 2 2;
+ .timescale -9 -12;
+v000001d9a92e48c0_0 .var "A", 0 0;
+v000001d9a92e4640_0 .var "B", 0 0;
+v000001d9a92e4960_0 .var "C", 0 0;
+v000001d9a92e4be0_0 .var "D", 0 0;
+v000001d9a92e4c80_0 .var "a", 0 0;
+v000001d9a92e4d20_0 .var "b", 0 0;
+v000001d9a93354a0_0 .net "q", 0 0, L_000001d9a9336940;  1 drivers
+S_000001d9a929d180 .scope module, "uut" "four_to_one_mux" 2 6, 3 1 0, S_000001d9a929cff0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "A";
+    .port_info 3 /INPUT 1 "B";
+    .port_info 4 /INPUT 1 "C";
+    .port_info 5 /INPUT 1 "D";
+    .port_info 6 /OUTPUT 1 "q";
+L_000001d9a9336a90 .functor NOT 1, v000001d9a92e4c80_0, C4<0>, C4<0>, C4<0>;
+L_000001d9a9336d30 .functor NOT 1, v000001d9a92e4d20_0, C4<0>, C4<0>, C4<0>;
+L_000001d9a9336b70 .functor AND 1, L_000001d9a9336a90, L_000001d9a9336d30, C4<1>, C4<1>;
+L_000001d9a9336c50 .functor AND 1, L_000001d9a9336b70, v000001d9a92e48c0_0, C4<1>, C4<1>;
+L_000001d9a9336cc0 .functor NOT 1, v000001d9a92e4c80_0, C4<0>, C4<0>, C4<0>;
+L_000001d9a9336b00 .functor AND 1, L_000001d9a9336cc0, v000001d9a92e4d20_0, C4<1>, C4<1>;
+L_000001d9a9336a20 .functor AND 1, L_000001d9a9336b00, v000001d9a92e4640_0, C4<1>, C4<1>;
+L_000001d9a9336da0 .functor OR 1, L_000001d9a9336c50, L_000001d9a9336a20, C4<0>, C4<0>;
+L_000001d9a93369b0 .functor NOT 1, v000001d9a92e4d20_0, C4<0>, C4<0>, C4<0>;
+L_000001d9a9336e10 .functor AND 1, v000001d9a92e4c80_0, L_000001d9a93369b0, C4<1>, C4<1>;
+L_000001d9a9336f60 .functor AND 1, L_000001d9a9336e10, v000001d9a92e4960_0, C4<1>, C4<1>;
+L_000001d9a9336be0 .functor OR 1, L_000001d9a9336da0, L_000001d9a9336f60, C4<0>, C4<0>;
+L_000001d9a93368d0 .functor AND 1, v000001d9a92e4c80_0, v000001d9a92e4d20_0, C4<1>, C4<1>;
+L_000001d9a9336ef0 .functor AND 1, L_000001d9a93368d0, v000001d9a92e4be0_0, C4<1>, C4<1>;
+L_000001d9a9336940 .functor OR 1, L_000001d9a9336be0, L_000001d9a9336ef0, C4<0>, C4<0>;
+v000001d9a92b2d70_0 .net "A", 0 0, v000001d9a92e48c0_0;  1 drivers
+v000001d9a92b28d0_0 .net "B", 0 0, v000001d9a92e4640_0;  1 drivers
+v000001d9a92e46e0_0 .net "C", 0 0, v000001d9a92e4960_0;  1 drivers
+v000001d9a92e4a00_0 .net "D", 0 0, v000001d9a92e4be0_0;  1 drivers
+v000001d9a92e4780_0 .net *"_ivl_0", 0 0, L_000001d9a9336a90;  1 drivers
+v000001d9a92e4000_0 .net *"_ivl_10", 0 0, L_000001d9a9336b00;  1 drivers
+v000001d9a92e4dc0_0 .net *"_ivl_12", 0 0, L_000001d9a9336a20;  1 drivers
+v000001d9a92e4e60_0 .net *"_ivl_14", 0 0, L_000001d9a9336da0;  1 drivers
+v000001d9a92e3f60_0 .net *"_ivl_16", 0 0, L_000001d9a93369b0;  1 drivers
+v000001d9a92e4aa0_0 .net *"_ivl_18", 0 0, L_000001d9a9336e10;  1 drivers
+v000001d9a92e4820_0 .net *"_ivl_2", 0 0, L_000001d9a9336d30;  1 drivers
+v000001d9a92e40a0_0 .net *"_ivl_20", 0 0, L_000001d9a9336f60;  1 drivers
+v000001d9a92e4140_0 .net *"_ivl_22", 0 0, L_000001d9a9336be0;  1 drivers
+v000001d9a92e41e0_0 .net *"_ivl_24", 0 0, L_000001d9a93368d0;  1 drivers
+v000001d9a92e4280_0 .net *"_ivl_26", 0 0, L_000001d9a9336ef0;  1 drivers
+v000001d9a92e4320_0 .net *"_ivl_4", 0 0, L_000001d9a9336b70;  1 drivers
+v000001d9a92e4b40_0 .net *"_ivl_6", 0 0, L_000001d9a9336c50;  1 drivers
+v000001d9a92e43c0_0 .net *"_ivl_8", 0 0, L_000001d9a9336cc0;  1 drivers
+v000001d9a92e4460_0 .net "a", 0 0, v000001d9a92e4c80_0;  1 drivers
+v000001d9a92e45a0_0 .net "b", 0 0, v000001d9a92e4d20_0;  1 drivers
+v000001d9a92e4500_0 .net "q", 0 0, L_000001d9a9336940;  alias, 1 drivers
+    .scope S_000001d9a929cff0;
+T_0 ;
+    %vpi_call 2 17 "$dumpfile", "four_to_one_mux.vcd" {0 0 0};
+    %vpi_call 2 18 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001d9a929cff0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001d9a92e4c80_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001d9a92e4d20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001d9a92e48c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001d9a92e4640_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001d9a92e4960_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001d9a92e4be0_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001d9a92e4c80_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001d9a92e4d20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001d9a92e48c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001d9a92e4640_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001d9a92e4960_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001d9a92e4be0_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001d9a92e4c80_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001d9a92e4d20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001d9a92e48c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001d9a92e4640_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001d9a92e4960_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001d9a92e4be0_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001d9a92e4c80_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001d9a92e4d20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001d9a92e48c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001d9a92e4640_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001d9a92e4960_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001d9a92e4be0_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 25 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "four_to_one_mux_tb.v";
+    "four_to_one_mux.v";
